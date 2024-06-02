@@ -179,33 +179,12 @@ footer {
   align-items: center;
 }
 
-/* Für Tablets */
-@media all and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    flex: 1 1 100%;
-  }
-
+@media all and (max-width: 40em) {
   main {
-    flex: 1 1 100%;
+    flex-direction: column;
   }
 }
 
-/* Für Smartphones */
-@media all and (max-width: 480px) {
-  .sidebar ul li {
-    font-size: 14px; /* Kleinere Schriftgröße für Smartphones */
-  }
-
-  #next-button {
-    padding: 10px;
-    font-size: 14px; /* Kleinere Schriftgröße für den Button */
-  }
-
-  footer {
-    font-size: 12px; /* Kleinere Schriftgröße für das Footer */
-  }
+main > * {
+  order: 0;
 }
