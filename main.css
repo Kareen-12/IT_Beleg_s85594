@@ -1,16 +1,16 @@
-* Global Styles */
+/* Global Styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {         /*Hauptcontainer Element einer HTML-Seite*/
+body {         
   width: 100%;
   height: 100vh;
 }
 
-/* Header Styles, den oberen Teil der Webseite */
+/* Header Styles */
 header {
   width: 100%;
   height: 300px;
@@ -21,11 +21,12 @@ header {
   font-size: 3rem;
   letter-spacing: 3px;
   background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-purple-flowers-wallpaper-hd-1080p-552px-picture-image_2650265.jpg');
-  
+  background-size: cover;
+  background-position: center;
   color: #ebe3ec;
 }
 
-/* Navigation Styles*/
+/* Navigation Styles */
 nav {
   width: 100%;
   display: flex;
@@ -44,7 +45,7 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {  /*Bereich Kategorie*/
+nav ul li {
   padding: 10px;
   text-align: center;
   background-color: rgb(89, 4, 97);
@@ -61,7 +62,7 @@ nav ul li:hover {
   background-color: rgb(66, 47, 79);
 }
 
-/* Main Content Styles,  */
+/* Main Content Styles */
 main {
   width: 100%;
   display: flex;
@@ -69,8 +70,8 @@ main {
   align-items: center;
   padding: 10px;
   height: 70vh;
-  background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-purple-flowers-wallpaper-hd-1080p-552px-picture-image_2650265.jpg'); 
-  background-size: 100%; 
+  background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-purple-flowers-wallpaper-hd-1080p-552px-picture-image_2650265.jpg');
+  background-size: cover; 
   background-position: center; 
 }
 
@@ -119,7 +120,7 @@ main .qusetions fieldset ul {
   gap: 20px;
 }
 
-.start h1 { /* Text bereich*/
+.start h1 {
   color: rgb(233, 221, 236);
   text-shadow: #504b4f;
   font-size: 1.5rem;
@@ -179,12 +180,70 @@ footer {
   align-items: center;
 }
 
-@media all and (max-width: 40em) {
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablets */
+  header {
+    height: 200px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   main {
     flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .start {
+    height: auto;
+  }
+
+  footer {
+    font-size: 1rem;
   }
 }
 
-main > * {
-  order: 0;
+@media (max-width: 480px) { /* Smartphones */
+  header {
+    height: 150px;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  nav ul li {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .start {
+    height: auto;
+  }
+
+  .start h1 {
+    font-size: 1rem;
+  }
+
+  .start button {
+    padding: 5px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
