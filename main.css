@@ -1,0 +1,211 @@
+* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {         /*Hauptcontainer Element einer HTML-Seite*/
+  width: 100%;
+  height: 100vh;
+}
+
+/* Header Styles, den oberen Teil der Webseite */
+header {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-purple-flowers-wallpaper-hd-1080p-552px-picture-image_2650265.jpg');
+  
+  color: #ebe3ec;
+}
+
+/* Navigation Styles*/
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(121, 107, 120);
+  padding: 10px;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {  /*Bereich Kategorie*/
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(89, 4, 97);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: rgb(66, 47, 79);
+}
+
+/* Main Content Styles,  */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 70vh;
+  background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-purple-flowers-wallpaper-hd-1080p-552px-picture-image_2650265.jpg'); 
+  background-size: 100%; 
+  background-position: center; 
+}
+
+/* Start Section Styles */
+main .start {
+  width: 100%;
+  height: 50vh;
+}
+
+/* Questions Section Styles */
+main .qusetions {
+  background-color: rgb(197, 155, 231);
+  padding: 10px;
+  width: 100%;
+  display: none;
+}
+
+main .qusetions fieldset {
+  padding: 10px;
+}
+
+main .qusetions fieldset h2 {
+  padding: 5px;
+  background-color: antiquewhite;
+}
+
+main .qusetions fieldset ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.active {
+  background-color: rgb(241, 150, 234);
+  color: #fff;
+}
+
+/* Start Section (Again?) Styles */
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+}
+
+.start h1 { /* Text bereich*/
+  color: rgb(233, 221, 236);
+  text-shadow: #504b4f;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-transform: none;
+}
+
+.start button {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: rgb(109, 73, 143);
+  display: none;
+}
+
+.start button:hover {
+  background-color: darksalmon;
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  background-image: radial-gradient(
+    circle,
+    #6d088b,
+    #b362cc,
+    #9e54bb,
+    #773392,
+    #4c0568
+  );
+  color: #fff;
+}
+
+/* Additional Styles */
+.progress {
+  padding: 10px;
+  text-align: center;
+  background-color: #0e0722;
+  color: #fff;
+}
+
+.score {
+  padding: 5px;
+  background-color: rgb(197, 190, 199);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Für Tablets */
+@media all and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: 1 1 100%;
+  }
+
+  main {
+    flex: 1 1 100%;
+  }
+}
+
+/* Für Smartphones */
+@media all and (max-width: 480px) {
+  .sidebar ul li {
+    font-size: 14px; /* Kleinere Schriftgröße für Smartphones */
+  }
+
+  #next-button {
+    padding: 10px;
+    font-size: 14px; /* Kleinere Schriftgröße für den Button */
+  }
+
+  footer {
+    font-size: 12px; /* Kleinere Schriftgröße für das Footer */
+  }
+}
